@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">ForceMusic</string>
+    <string name="navigation_drawer_open">Abra a gaveta de navegação</string>
+    <string name="navigation_drawer_close">Feche a gaveta de navegação</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Cabeçalho de navegação</string>
+    <string name="action_settings">Configurações</string>
+
+    <!--Erro-->
+    <string name="erroData">Por favor, insira a data!</string>
+    <string name="erroHora">Por favor, insira a hora!</string>
+
+    <!--Navigation Drawer-->
+    <string name="home_frag">Início</string>
+    <string name="musica_frag">Música</string>
+    <string name="historico_frag">Histórico</string>
+    <string name="sobre_frag">Sobre o AppTESI</string>
+
+    <!--custom_layout-->
+    <string name="cadastro">CADASTRO</string>
+    <string name="alterar">ALTERAR</string>
+
+    <string name="salvarBtn">Salvar</string>
+    <string name="cancelBtn">Cancelar</string>
+    <string name="alterarBtn">Atualizar</string>
+    <string name="deleteBtn">Deletar</string>
+
+    <string name="dataHint">Data</string>
+    <string name="dataText">Data: %s</string>
+
+    <string name="timeHint">Hora</string>
+    <string name="timeText">Hora: </string>
+
+    <!--DetailActivity-->
+    <string name="detalhes">Detalhes</string>
+    <string name="confirmar">Confirmação</string>
+    <string name="pergunta">Tem certeza que deseja deletar este item?</string>
+    <string name="cancelar">Cancelar</string>
+
+    <string name="erroUpdate">Não é possível atualizar</string>
+    <string name="sucessoDelete">Deletado com Sucesso</string>
+    <string name="erroDelete">Erro ao  Deletar</string>
+
+    <!--SobreFragment-->
+    <string name="universidade">UNIVERSIDADE PARANAENSE</string>
+    <string name="unipar">UNIPAR</string>
+    <string name="curso">Sistemas de Informação</string>
+
+    <string name="professor">Professor</string>
+    <string name="nomeProf">Carlos Eduardo Pelegrin</string>
+
+    <string name="academicos">Acadêmicos</string>
+    <string name="academico1">Bruno Souza - RA: 00177204</string>
+    <string name="academico2">Icaro Flausino - RA: 00183135</string>
+    <string name="academico3">Leonardo Morini - RA: 00181511</string>
+
+    <string name="descricao">Descrição do Projeto: Este projeto é dedicado a tocar uma música em 8
+        bits utilizando Arduino e um App Android, pelo qual a música será controlada.</string>
+</resources>
