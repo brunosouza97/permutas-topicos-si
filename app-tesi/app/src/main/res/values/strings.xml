@@ -7,6 +7,54 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--Erro-->
+    <string name="erroData">Please enter the date!</string>
+    <string name="erroHora">Please enter the hour!</string>
+
+    <!--Navigation Drawer-->
+    <string name="home_frag">Home</string>
+    <string name="musica_frag">Music</string>
+    <string name="historico_frag">Historic</string>
+    <string name="sobre_frag">About AppTESI</string>
+
+    <!--custom_layout-->
+    <string name="cadastro">REGISTER</string>
+    <string name="alterar">ALTER</string>
+
+    <string name="salvarBtn">Save</string>
+    <string name="cancelBtn">Cancel</string>
+    <string name="alterarBtn">Update</string>
+    <string name="deleteBtn">Delete</string>
+
+    <string name="dataHint">Date</string>
+    <string name="dataText">Date: </string>
+
+    <string name="timeHint">Hour</string>
+    <string name="timeText">Hour: </string>
+
+    <!--DetailActivity-->
+    <string name="detalhes">Details</string>
+    <string name="confirmar">Confirmation</string>
+    <string name="pergunta">Are you sure you want to delete this item?</string>
+    <string name="cancelar">Cancel</string>
+
+    <string name="erroUpdate">Unable to Update</string>
+    <string name="sucessoDelete">Deleted Successfully</string>
+    <string name="erroDelete">Error Deleting</string>
+
+    <!--SobreFragment-->
+    <string name="universidade">UNIVERSIDADE PARANAENSE</string>
+    <string name="unipar">UNIPAR</string>
+    <string name="curso">Information Systems</string>
+
+    <string name="professor">Professor</string>
+    <string name="nomeProf">Carlos Eduardo Pelegrin</string>
+
+    <string name="academicos">Academics</string>
+    <string name="academico1">Bruno Souza - AR: 00177204</string>
+    <string name="academico2">Icaro Flausino - AR: 00183135</string>
+    <string name="academico3">Leonardo Morini - AR: 00181511</string>
+
+    <string name="descricao">Description of the Project: This project is dedicated to playing a song
+        in 8 bits using Arduino and an Android App, by which the music will be controlled.</string>
 </resources>
