@@ -23,13 +23,12 @@
             android:textSize="50dp"/>
 
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_width="192dp"
+            android:layout_height="194dp"
             android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="0dp"
+            android:layout_alignParentEnd="true"
             android:scaleType="centerCrop"
-            app:srcCompat="@mipmap/ic_stormtrooper" />
+            app:srcCompat="@mipmap/ic_launcher_vader" />
 
     </RelativeLayout>
 

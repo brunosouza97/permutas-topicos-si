@@ -19,10 +19,10 @@
                                   <option name="values">
                                     <map>
                                       <entry key="backgroundImage" value="$USER_HOME$/Pictures/stormtroopers.png" />
-                                      <entry key="backgroundLayerName" value="ic_launcher_background_stormtrooper" />
-                                      <entry key="foregroundImage" value="$USER_HOME$/Pictures/stormtroopers.png" />
+                                      <entry key="backgroundLayerName" value="ic_launcher_background_vader" />
+                                      <entry key="foregroundImage" value="$USER_HOME$/Pictures/darth_vader_home.jpg" />
                                       <entry key="foregroundLayerName" value="ic_stormtrooper" />
-                                      <entry key="outputName" value="ic_launcher_stormtrooper" />
+                                      <entry key="outputName" value="ic_launcher_vader" />
                                     </map>
                                   </option>
                                 </PersistentState>
