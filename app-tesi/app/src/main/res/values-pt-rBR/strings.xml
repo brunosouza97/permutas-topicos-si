@@ -57,4 +57,7 @@
 
     <string name="descricao">Descrição do Projeto: Este projeto é dedicado a tocar uma música em 8
         bits utilizando Arduino e um App Android, pelo qual a música será controlada.</string>
+
+    <!--HomeFragment-->
+    <string name="forca">QUE A FORÇA ESTEJA COM VOCÊ!</string>
 </resources>
