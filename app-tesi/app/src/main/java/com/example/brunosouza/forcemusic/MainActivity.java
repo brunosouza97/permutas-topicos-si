@@ -1,5 +1,11 @@
 package com.example.brunosouza.forcemusic;
 
+import android.content.Context;
+import android.content.pm.ActivityInfo;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -23,12 +29,19 @@ public class MainActivity extends AppCompatActivity
 
     private static final String TAG = "MainActivity";
 
+    private SensorManager senSensorManager;
+    private Sensor senAccelerometer;
+    private long lastUpdate = 0;
+    private float last_x, last_y, last_z;
+    private static final int SHAKE_THRESHOLD = 600;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -40,6 +53,10 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         displaySelectedScreen(R.id.nav_home);
+
+        senSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+        senAccelerometer = senSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        senSensorManager.registerListener((SensorEventListener) sel, senAccelerometer , SensorManager.SENSOR_DELAY_NORMAL);
     }
 
     @Override
@@ -103,6 +120,45 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
     }
 
+    private SensorEventListener sel = new SensorEventListener() {
+        @Override
+        public void onSensorChanged(SensorEvent event) {
+            Sensor mySensor = event.sensor;
+
+            if (mySensor.getType() == Sensor.TYPE_ACCELEROMETER) {
+                float x = event.values[0];
+                float y = event.values[1];
+                float z = event.values[2];
+
+                long curTime = System.currentTimeMillis();
+
+                if ((curTime - lastUpdate) > 1000) {
+                    long diffTime = (curTime - lastUpdate);
+                    lastUpdate = curTime;
+
+                    float speed = Math.abs(x + y + z - last_x - last_y - last_z)/ diffTime * 10000;
+
+                    if (speed > SHAKE_THRESHOLD) {
+
+                    }
+
+                    last_x = x;
+                    last_y = y;
+                    last_z = z;
+                }
+
+                Log.d(TAG, "X: " + x);
+                Log.d(TAG, "Y: " + y);
+                Log.d(TAG, "Z: " + z);
+            }
+        }
+
+        @Override
+        public void onAccuracyChanged(Sensor sensor, int accuracy) {
+
+        }
+    };
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -113,12 +169,14 @@ public class MainActivity extends AppCompatActivity
     protected void onResume() {
         super.onResume();
         Log.i(TAG, "onResume");
+        senSensorManager.registerListener((SensorEventListener) sel, senAccelerometer, SensorManager.SENSOR_DELAY_NORMAL);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
         Log.d(TAG, "onPause");
+        senSensorManager.unregisterListener((SensorEventListener) sel);
     }
 
     @Override

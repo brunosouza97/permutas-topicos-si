@@ -57,4 +57,7 @@
 
     <string name="descricao">Description of the Project: This project is dedicated to playing a song
         in 8 bits using Arduino and an Android App, by which the music will be controlled.</string>
+
+    <!--HomeFragment-->
+    <string name="forca">MAY THE FORCE BE WITH YOU!</string>
 </resources>
