@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity
 
         senSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         senAccelerometer = senSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
-        senSensorManager.registerListener((SensorEventListener) sel, senAccelerometer , SensorManager.SENSOR_DELAY_NORMAL);
+        senSensorManager.registerListener(sel, senAccelerometer , SensorManager.SENSOR_DELAY_NORMAL);
     }
 
     @Override
@@ -169,14 +169,14 @@ public class MainActivity extends AppCompatActivity
     protected void onResume() {
         super.onResume();
         Log.i(TAG, "onResume");
-        senSensorManager.registerListener((SensorEventListener) sel, senAccelerometer, SensorManager.SENSOR_DELAY_NORMAL);
+        senSensorManager.registerListener(sel, senAccelerometer, SensorManager.SENSOR_DELAY_NORMAL);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
         Log.d(TAG, "onPause");
-        senSensorManager.unregisterListener((SensorEventListener) sel);
+        senSensorManager.unregisterListener(sel);
     }
 
     @Override
