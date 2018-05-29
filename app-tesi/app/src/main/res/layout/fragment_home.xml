@@ -23,12 +23,13 @@
             android:textSize="50dp"/>
 
         <ImageView
-            android:layout_width="192dp"
-            android:layout_height="194dp"
+            android:layout_width="236dp"
+            android:layout_height="254dp"
             android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
             android:scaleType="centerCrop"
-            app:srcCompat="@mipmap/ic_launcher_vader" />
+            app:srcCompat="@mipmap/ic_darth_vader_home" />
 
     </RelativeLayout>
 
