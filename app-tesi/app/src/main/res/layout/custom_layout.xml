@@ -26,7 +26,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignStart="@+id/horaEditTxt"
                 android:layout_marginTop="10dp"
-                android:src="@mipmap/ic_launcher_round" />
+                android:src="@mipmap/ic_yoda" />
 
 
             <TextView
@@ -40,7 +40,7 @@
                 android:layout_marginTop="25dp"
                 android:text="@string/cadastro"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="@color/colorAccent"
+                android:textColor="@color/colorPrimaryDark"
                 android:textStyle="bold" />
 
             <EditText

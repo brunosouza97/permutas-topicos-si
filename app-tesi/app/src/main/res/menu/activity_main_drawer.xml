@@ -6,21 +6,21 @@
     <group android:id="@+id/menu_top" android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_home_black_24dp"
+            android:icon="@drawable/millennium_falcon_home"
             android:title="@string/home_frag" />
         <item
             android:id="@+id/nav_musica"
-            android:icon="@drawable/ic_music_note_black_24dp"
+            android:icon="@drawable/chewbacca_musica"
             android:title="@string/musica_frag" />
         <item
             android:id="@+id/nav_historico"
-            android:icon="@drawable/ic_history_black_24dp"
+            android:icon="@drawable/r2d2_historico"
             android:title="@string/historico_frag" />
     </group>
     <group android:id="@+id/menu_bottom" android:checkableBehavior="single">
         <item
             android:id="@+id/nav_sobre"
-            android:icon="@drawable/ic_info_black_24dp"
+            android:icon="@drawable/c3po_about"
             android:title="@string/sobre_frag" />
     </group>
 

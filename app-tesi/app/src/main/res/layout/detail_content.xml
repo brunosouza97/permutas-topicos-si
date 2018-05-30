@@ -36,7 +36,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="15dp"
-                android:src="@mipmap/ic_launcher_round" />
+                android:src="@mipmap/ic_yoda" />
 
             <TextView
                 android:id="@+id/profile"
@@ -47,7 +47,7 @@
                 android:layout_marginTop="30dp"
                 android:text="@string/alterar"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="@color/colorAccent"
+                android:textColor="@color/colorPrimaryDark"
                 android:textStyle="bold" />
 
             <EditText
@@ -90,8 +90,7 @@
                     android:gravity="center_vertical|center_horizontal"
                     android:padding="5dp"
                     android:text="@string/alterarBtn"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="@color/colorPrimary" />
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <Button
                     android:id="@+id/deleteBtn"
@@ -102,8 +101,7 @@
                     android:gravity="center_vertical|center_horizontal"
                     android:padding="5dp"
                     android:text="@string/deleteBtn"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="@color/colorPrimary" />
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
 
             </LinearLayout>
 
