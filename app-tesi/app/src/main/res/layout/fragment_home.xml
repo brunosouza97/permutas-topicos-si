@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".fragments.HomeFragment">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="350dp"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_may_the_force"
+        android:contentDescription="@string/forca"
+        android:scaleType="centerCrop" />
 
-        <TextView
-            android:gravity="center"
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:textColor="#000"
-            android:typeface="serif"
-            android:text="@string/forca"
-            android:textSize="50dp"/>
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:contentDescription="@string/forca"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/ic_darth_vader"
+        android:scaleType="centerCrop" />
 
+<<<<<<< HEAD
         <ImageView
             android:layout_width="236dp"
             android:layout_height="254dp"
@@ -34,3 +38,6 @@
     </RelativeLayout>
 
 </FrameLayout>
+=======
+</RelativeLayout>
+>>>>>>> develop
