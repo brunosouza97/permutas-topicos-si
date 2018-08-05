@@ -7,18 +7,11 @@
     android:id="@+id/fragment_historico"
     tools:context=".fragments.HistoricoFragment">
 
-    <include
-        layout="@layout/swipe_recycler"
+    <ListView
+        android:id="@+id/list_historic"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab_historico_fragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_input_add"
-        android:tint="#fff"/>
+        android:layout_height="match_parent"
+        android:background="@android:color/holo_purple"
+        android:headerDividersEnabled="false" />
 
 </FrameLayout>

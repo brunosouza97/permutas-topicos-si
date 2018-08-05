@@ -8,7 +8,7 @@
 
     <ImageView
         android:layout_width="350dp"
-        android:layout_height="250dp"
+        android:layout_height="205dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
@@ -17,27 +17,15 @@
         android:scaleType="centerCrop" />
 
     <ImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:contentDescription="@string/forca"
+        android:layout_width="227dp"
+        android:layout_height="279dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:background="@drawable/ic_darth_vader"
+        android:contentDescription="@string/forca"
         android:scaleType="centerCrop" />
 
-<<<<<<< HEAD
-        <ImageView
-            android:layout_width="236dp"
-            android:layout_height="254dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="0dp"
-            android:scaleType="centerCrop"
-            app:srcCompat="@mipmap/ic_darth_vader_home" />
 
-    </RelativeLayout>
-
-</FrameLayout>
-=======
 </RelativeLayout>
->>>>>>> develop
+
+
