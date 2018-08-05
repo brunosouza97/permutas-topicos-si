@@ -147,9 +147,9 @@ public class MainActivity extends AppCompatActivity
                     last_z = z;
                 }
 
-                Log.d(TAG, "X: " + x);
-                Log.d(TAG, "Y: " + y);
-                Log.d(TAG, "Z: " + z);
+//                Log.d(TAG, "X: " + x);
+//                Log.d(TAG, "Y: " + y);
+//                Log.d(TAG, "Z: " + z);
             }
         }
 
@@ -162,13 +162,13 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onStart() {
         super.onStart();
-        Log.d(TAG, "onStart");
+//        Log.d(TAG, "onStart");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.i(TAG, "onResume");
+//        Log.i(TAG, "onResume");
         senSensorManager.registerListener(sel, senAccelerometer, SensorManager.SENSOR_DELAY_NORMAL);
     }
 
