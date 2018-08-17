@@ -160,6 +160,7 @@ public class MainActivity extends AppCompatActivity
             ft.commit();
         }
 
+        // carrega o DrawerLayout
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
     }
@@ -168,6 +169,9 @@ public class MainActivity extends AppCompatActivity
      * Este método é responsável por carregar o acelerômetro
      */
     private SensorEventListener sel = new SensorEventListener() {
+        /**
+         * trata os eventos do acelerômetro
+         */
         @Override
         public void onSensorChanged(SensorEvent event) {
             Sensor mySensor = event.sensor;
