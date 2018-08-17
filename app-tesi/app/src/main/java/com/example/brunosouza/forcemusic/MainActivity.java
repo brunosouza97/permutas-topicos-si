@@ -24,6 +24,14 @@ import com.example.brunosouza.forcemusic.fragments.HomeFragment;
 import com.example.brunosouza.forcemusic.fragments.MusicaFragment;
 import com.example.brunosouza.forcemusic.fragments.SobreFragment;
 
+/**
+ * @author Bruno Souza
+ * Esta activity exibe um Navigation Drawer e foi implementado
+ * um acelerômetro com intuito de retornar as coordenadas
+ *
+ * @see NavigationView
+ * @link https://developer.android.com/training/implementing-navigation/nav-drawer?hl=pt-br
+ */
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -35,6 +43,12 @@ public class MainActivity extends AppCompatActivity
     private float last_x, last_y, last_z;
     private static final int SHAKE_THRESHOLD = 600;
 
+    /**
+     * Este método é utilizado para carregar os layouts XML e as demais
+     * operações de inicialização
+     *
+     * @param savedInstanceState = permite restaurar o estado da activity
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,6 +73,9 @@ public class MainActivity extends AppCompatActivity
         senSensorManager.registerListener(sel, senAccelerometer , SensorManager.SENSOR_DELAY_NORMAL);
     }
 
+    /**
+     * Tem a função de recuar/voltar
+     */
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -69,25 +86,38 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+    /**
+     * Carrega o layout de menu
+     *
+     * @param menu = objeto passado como parâmetro ao getMenuInflater
+     * @return = retorna true ao método onCreateOptionsMenu()
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
+        // "infla" o menu; adiciona os itens a action bar se estiverem presentes.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+//
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        // Handle action bar item clicks here. The action bar will
+//        // automatically handle clicks on the Home/Up button, so long
+//        // as you specify a parent activity in AndroidManifest.xml.
+//        int id = item.getItemId();
+//
+//        //noinspection SimplifiableIfStatement
+//
+//        return super.onOptionsItemSelected(item);
+//    }
 
-        //noinspection SimplifiableIfStatement
-
-        return super.onOptionsItemSelected(item);
-    }
-
+    /**
+     * Resposável por carregar o método displaySelectedScreen()
+     *
+     * @param item = objeto passado como parâmetro ao método displaySelectedScreen()
+     * @return = retorna true ao método onNavigationItemSelected()
+     */
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -97,9 +127,18 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
+    /**
+     * Este método tem a função de alternar entre os menus e abrir o Fragment
+     * referente ao item de menu clicado
+     *
+     * @param id = objeto passado como parâmetro ao método displaySelectedScreen()
+     * este objeto é responsável por identificar o layout XML referente ao menu clicado
+     */
     private void displaySelectedScreen(int id){
+        // inicia o objeto fragment como nulo
         Fragment fragment = null;
 
+        // estrutura de decisão dos itens de menu
         if (id == R.id.nav_home) {
             fragment = new HomeFragment();
         } else if (id == R.id.nav_musica) {
@@ -110,9 +149,14 @@ public class MainActivity extends AppCompatActivity
             fragment = new SobreFragment();
         }
 
+        // estrutura de decisão onde é criado o fragment
+        // caso seja diferente de nulo
         if (fragment != null) {
+            // carrega o FragmentManager
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            // faz a substituição do fragment
             ft.replace(R.id.fragment_container, fragment);
+            // salva as operações feitas
             ft.commit();
         }
 
@@ -120,6 +164,9 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
     }
 
+    /**
+     * Este método é responsável por carregar o acelerômetro
+     */
     private SensorEventListener sel = new SensorEventListener() {
         @Override
         public void onSensorChanged(SensorEvent event) {
@@ -147,9 +194,9 @@ public class MainActivity extends AppCompatActivity
                     last_z = z;
                 }
 
-                Log.d(TAG, "X: " + x);
-                Log.d(TAG, "Y: " + y);
-                Log.d(TAG, "Z: " + z);
+//                Log.d(TAG, "X: " + x);
+//                Log.d(TAG, "Y: " + y);
+//                Log.d(TAG, "Z: " + z);
             }
         }
 
@@ -162,13 +209,13 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onStart() {
         super.onStart();
-        Log.d(TAG, "onStart");
+//        Log.d(TAG, "onStart");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.i(TAG, "onResume");
+//        Log.i(TAG, "onResume");
         senSensorManager.registerListener(sel, senAccelerometer, SensorManager.SENSOR_DELAY_NORMAL);
     }
 
